@@ -1,7 +1,7 @@
 import React from 'react'
 import './home.css'
 import image from '../assets/icon-votes.jpg'
-import {Link } from 'react-router-dom'
+import {Link, useNavigate } from 'react-router-dom'
 
 
 
@@ -57,6 +57,15 @@ function Home() {
 
     ]
 
+    const navigate = useNavigate()
+
+    const handleClick =(id)=>{
+
+        navigate(`/voter/${id}`)
+
+
+    }
+
 
   return (
 
@@ -82,11 +91,11 @@ function Home() {
 
                                     <h3 className ='asp-name'>Name:{person.name}</h3>
 
-                                    <Link to= {`/voter/${person.id}`}>
+                                    {/* <Link to= {`/voter/${person.id}`}> */}
 
-                                     <button className="btn-cont">{person.btn}</button>
+                                     <button className="btn-cont" onClick={()=>handleClick(person.id)}>{person.btn}</button>
                                     
-                                    </Link>
+                                    {/* </Link> */}
 
                                 </div>
 
