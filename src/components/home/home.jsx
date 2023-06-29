@@ -68,11 +68,7 @@ function Home() {
 
                 <div className="main-aspirants-cont">
 
-
-
                     {aspirants.map((person)=>(
-                        
-                        
                         
                         <div className ='aspirant-containers' key ={person.id}>
 
@@ -84,7 +80,7 @@ function Home() {
 
                                     <h3 className ='asp-name'>Name:{person.name}</h3>
 
-                                    <Link to= {`/${person.id}`}>
+                                    <Link to= {`/voter/${person.id}`}>
 
                                      <button className="btn-cont">{person.btn}</button>
                                     
@@ -102,21 +98,8 @@ function Home() {
                 </div>
 
 
-
-
-
-
-
-
         </section>
 
-
-
-    
-    
-    
-    
-    
     </>
 
 

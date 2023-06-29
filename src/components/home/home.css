@@ -26,7 +26,10 @@
 
 .aspirant-containers{
 
-    width: calc(30.33% - 10px);
+    width: calc(30.33% - 2px);
+    /* margin-left:20px; */
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
 }
 
