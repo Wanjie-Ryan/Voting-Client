@@ -8,7 +8,14 @@ function Voter() {
   return (
 
 
-    <div>voter</div>
+    <>
+
+
+        <h3>djhdbhsd</h3>
+    
+    
+    
+    </>
 
 
 

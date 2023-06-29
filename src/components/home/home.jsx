@@ -4,6 +4,8 @@ import image from '../assets/icon-votes.jpg'
 import {Link } from 'react-router-dom'
 
 
+
+
 function Home() {
 
     const aspirants = [
