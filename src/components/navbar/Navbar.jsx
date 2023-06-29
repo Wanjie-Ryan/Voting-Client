@@ -37,7 +37,7 @@ function Navbar() {
             <div className="navbar--logo">
               <div className="img-logo">
 
-                <h2>Let's Vote</h2>
+                <h2>Sisi Voters</h2>
               </div>
 
               <div className="flip-box">
@@ -131,13 +131,13 @@ function Navbar() {
             </div>
 
             
-              <div className="signup-button">
+              {/* <div className="signup-button">
                 <Link to="/register">
                   <button className="signup-button--button">Sign Up</button>
                 </Link>
 
                 <BiMenu className="menu" onClick={() => setshownav(!shownav)} />
-              </div>
+              </div> */}
             
           </div>
         </div>
@@ -165,7 +165,7 @@ function Navbar() {
               <div className="side-main-logo">
                 <div className="main-logo">
                   <Link to="/">
-                    <p>Let's Vote</p>
+                    <p>Sisi Voters</p>
                   </Link>
                 </div>
 
@@ -231,7 +231,7 @@ function Navbar() {
                   {/* <hr></hr> */}
                 </div>
 
-                <h2 className="nav-side-servies">Services</h2>
+                {/* <h2 className="nav-side-servies">Services</h2>
 
                 <div className="navs">
                   <div className="side-contact">
@@ -281,9 +281,9 @@ function Navbar() {
                   </div>
 
                   <hr></hr>
-                </div>
+                </div> */}
 
-                <h4 className="join">Join The G2F Platform Today</h4>
+                <h4 className="join">Let's Vote Today!!</h4>
 
                
                   <div className="btns-side">

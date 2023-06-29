@@ -24,7 +24,7 @@ function Footer() {
                     
                     <p>Reach Us at:</p>
 
-                    <a href ='https://github.com/G2F-Connect' className='icons' target="_blank" rel="noopener noreferrer"><BsGithub className='icons-s' /></a>
+                    <a href ='https://github.com/Wanjie-Ryan/Voting-Client' className='icons' target="_blank" rel="noopener noreferrer"><BsGithub className='icons-s' /></a>
                     <a href = 'https://twitter.com' className='icons' target="_blank" rel="noopener noreferrer"><BsTwitter  className='icons-s'/></a>
 
 
@@ -34,7 +34,7 @@ function Footer() {
 
                 <nav className="site-footer--nav">
                     <div className="site-footer--col">
-                        <h5 className="-title">G2F Connect</h5>
+                        <h5 className="-title">Sisi Voters</h5>
                         <ul className="-list">
                             <li>
                                 <Link to="/about">About Us</Link>
@@ -72,7 +72,7 @@ function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div className="site-footer--col">
+                    {/* <div className="site-footer--col">
                         <h5 className="-title">Services</h5>
                         <ul className="-list">
                             <li>
@@ -91,10 +91,10 @@ function Footer() {
                                 <Link to="/fertilizers">Subsidzed Products</Link>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                 </nav>
             </div>
-            <div className="site-footer--copyright"><p>Copyright © {year} G2F Connect. All rights reserved.</p></div>
+            <div className="site-footer--copyright"><p>Copyright © {year} Sisi Voters. All rights reserved.</p></div>
 
 
         </footer>
