@@ -15,8 +15,12 @@ function Home() {
 
         <section className="voters">
 
+            <h1 className="aspirants">And Our Aspirants are</h1>
 
-            
+
+
+
+
 
 
 
