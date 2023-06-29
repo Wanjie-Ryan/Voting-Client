@@ -21,7 +21,7 @@
     background-repeat: var(--theme-footer-background-repeat);
     background-size: var(--theme-footer-background-size);
     border-top: var(--theme-footer-background-border-top);
-    background-color: white;
+    background-color: black;
     position: inherit;
     bottom: 0;
     left: 0;
