@@ -13,7 +13,16 @@ function Home() {
     <>
 
 
-        <h4>dhcdjcvdhjca</h4>
+        <section className="voters">
+
+
+            
+
+
+
+
+
+        </section>
 
 
 

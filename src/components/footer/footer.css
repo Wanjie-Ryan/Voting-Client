@@ -1,0 +1,195 @@
+:root {
+    --theme-footer-background-color: hsl(210, 8%, 15%);
+    --theme-footer-background-position: top left;
+    --theme-footer-background-repeat: no-repeat;
+    --theme-footer-background-size: auto;
+    --theme-footer-background-border-top: 0;
+    --theme-footer-title-color: hsl(210, 8%, 75%);
+    --theme-footer-text-color: hsl(210, 8%, 60%);
+    --theme-footer-link-color: hsl(210, 8%, 60%);
+    --theme-footer-link-color-hover: hsl(210, 8%, 65%);
+    --theme-footer-link-color-active: hsl(27, 90%, 55%);
+    --theme-footer-link-caret-color: var(--theme-footer-background-color);
+    --theme-footer-divider-color: hsl(210, 8%, 25%);
+    --theme-footer-padding-top: 0;
+    --theme-footer-padding-bottom: 0;
+  }
+  
+  .footer {
+    background-image: url("https://images.unsplash.com/photo-1517245386807-9b4d0dd9c9e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+    background-position: var(--theme-footer-background-position);
+    background-repeat: var(--theme-footer-background-repeat);
+    background-size: var(--theme-footer-background-size);
+    border-top: var(--theme-footer-background-border-top);
+    background-color: white;
+    position: inherit;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color:purple;
+    width: 100%;
+    z-index: 9999; /* Set a higher z-index to ensure it's on top of other content */
+  }
+  
+  .site-footer--container {
+    max-width: 1264px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    padding-top: 50px;
+  }
+  
+  /* .logo {
+    width: 100%;
+    max-width: 100px;
+    margin: 0 auto;
+  } */
+  
+  .site-footer--logo {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .site-footer--logo p{
+  
+    color:var(--theme-footer-title-color);
+    font-size: 12.5px;
+    line-height: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .site-footer--logo .icons-s{
+  
+    color: hsl(210, 8%, 60%);
+    cursor: pointer;
+    margin-left:10px;
+    transition: color 0.3s ease;
+    font-size: 22px;
+  }
+  
+.site-footer--logo .icons-s{
+  
+     font-size: 22px;
+}
+  
+  .site-footer--logo .icons-s:hover{
+  
+    color:purple;
+    animation: shake 0.5s infinite;
+    
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-5deg); }
+    75% { transform: translateX(5px) rotate(5deg); }
+    100% { transform: translateX(0); }
+  }
+  
+  
+  
+  .site-footer--nav {
+    display: flex;
+    flex: 2 1 auto;
+    flex-wrap: wrap;
+  }
+  
+  .site-footer--col {
+    padding: 0 12px 24px 0;
+    flex: 1 0 auto;
+    text-align: left;
+  }
+  
+  .-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: var(--theme-footer-title-color);
+    line-height: 12px;
+  }
+  
+  .-list {
+    margin: 0;
+    list-style: none;
+  }
+  
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .site-footer--copyright {
+    flex: 1 1 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+  
+  .flex-left {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  
+  a,
+  a:visited,
+  h5,
+  .site-footer--copyright ul li,
+  .site-footer--copyright p {
+    /* color: var(--theme-footer-link-color); */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .site-footer--copyright ul li {
+    padding-left: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .site-footer--container {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+  
+    .site-footer--logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .site-footer--nav {
+      flex-direction: row;
+    }
+  
+    .site-footer--col {
+      padding-right: 0;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+  .-list .footer-links{
+
+    color:purple;
+    /* font-weight: 600; */
+
+  }
+
+  .-list .footer-links{color:purple;}
+
+  .site-footer--copyright .footer-links{
+
+    color:purple;
+    font-weight: 600;
+  }
