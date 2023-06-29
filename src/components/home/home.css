@@ -10,3 +10,61 @@
     text-align: center;
 
 }
+
+.main-aspirants-cont{
+
+    margin-top:20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    flex-direction:row;
+    width:90%;
+    margin-left:auto;
+    margin-right: auto;
+
+}
+
+.aspirant-containers{
+
+    width: calc(30.33% - 10px);
+    margin-bottom: 20px;
+}
+
+.aspirant-cont{
+
+    display:flex;
+    flex-direction:column;
+    width:350px;
+    
+}
+
+.asp-img{
+
+    height:26vh;
+    width:22vw;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 4px purple;
+}
+
+.aspirant-details{
+
+    /* display: flex;
+    flex-direction:column;
+    align-items: center; */
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right:auto;
+
+
+}
+
+
+.btn-cont{
+
+    margin-top: 10px;
+    background-color: purple;
+    color:white;
+    cursor:pointer;
+} 

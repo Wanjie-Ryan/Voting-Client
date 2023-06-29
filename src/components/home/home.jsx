@@ -10,42 +10,42 @@ function Home() {
 
         {
             id:1,
-            image:{image},
+            image:image,
             name:'Ryan',
             btn:'vote'
         },
 
         {
             id:2,
-            image:'../assets/icon-votes.jpg',
+            image:image,
             name:'Rose',
             btn:'vote'
         },
 
         {
             id:3,
-            image:'../assets/icon-votes.jpg',
+            image:image,
             name:'Jimmy',
             btn:'vote'
         },
 
         {
             id:4,
-            image:'../assets/icon-votes.jpg',
+            image:image,
             name:'Kale',
             btn:'vote'
         },
 
         {
             id:5,
-            image:'../assets/icon-votes.jpg',
+            image:image,
             name:'Juliet',
             btn:'vote'
         },
 
         {
             id:6,
-            image:'../assets/icon-votes.jpg',
+            image:image,
             name:'Kim',
             btn:'vote'
         },
@@ -66,26 +66,35 @@ function Home() {
 
             <h1 className="aspirants-title">And Our Aspirants are</h1>
 
-            {aspirants.map((person)=>(
+                <div className="main-aspirants-cont">
 
 
-                
-                <div className ='aspirant-containers' key ={person.id}>
 
-                    <div className="aspirant-cont">
+                    {aspirants.map((person)=>(
+                        
+                        
+                        
+                        <div className ='aspirant-containers' key ={person.id}>
 
-                        <img className ='asp-img' src ={person.image} alt ={person.name}/>
-                        <h3 className ='asp-name'>{person.name}</h3>
-                        <button className="btn-cont">{person.btn}</button>
+                            <div className="aspirant-cont">
+
+                                <div className="imgs"><img className ='asp-img' src ={person.image} alt ={person.name}/></div>
+
+                                <div className ='aspirant-details'>
+
+                                    <h3 className ='asp-name'>{person.name}</h3>
+                                    <button className="btn-cont">{person.btn}</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    ))}
 
 
-                    </div>
-
-            </div>
-
-            ))}
-
-
+                </div>
 
 
 
