@@ -234,5 +234,15 @@
     margin-left: 10px;
     cursor: pointer;
   }
+
+  .side-details p{
+
+    text-align: center;
+    margin-top: 20px;
+    cursor:pointer;
+    color:purple;
+    font-weight: 700;
+
+  }
   
   

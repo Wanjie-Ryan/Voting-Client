@@ -64,21 +64,29 @@ function Navbar() {
 
                         <p>
 
-                            <Link to="/contact" className="home">
-                            Contact
+                            <Link to="" className="home">
+                            Admin
                             </Link>
 
                         </p>
 
                         <p>
 
-                            <Link to="/about" className="home">
-                            About
+                            <Link to="" className="home">
+                            Aspirant
                             </Link>
 
                         </p>
 
+                        <p>
 
+                            <Link to="/contact" className="home">
+                            Contact
+                            </Link>
+
+                        </p>
+
+                    
                     </div>
 
                     <div className="signup-button">
@@ -160,7 +168,9 @@ function Navbar() {
                     <div className="side-details">
 
                         <p>Admin</p>
-                        <p>Apirant</p>
+                        <hr></hr>
+                        <p>Aspirant</p>
+                        <hr></hr>
                         <p>Voter</p>
 
 
