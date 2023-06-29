@@ -1,7 +1,7 @@
 import React from 'react'
 import './home.css'
 import image from '../assets/icon-votes.jpg'
-
+import {Link } from 'react-router-dom'
 
 
 function Home() {
@@ -82,8 +82,13 @@ function Home() {
 
                                 <div className ='aspirant-details'>
 
-                                    <h3 className ='asp-name'>{person.name}</h3>
-                                    <button className="btn-cont">{person.btn}</button>
+                                    <h3 className ='asp-name'>Name:{person.name}</h3>
+
+                                    <Link to= {`/${person.id}`}>
+
+                                     <button className="btn-cont">{person.btn}</button>
+                                    
+                                    </Link>
 
                                 </div>
 
