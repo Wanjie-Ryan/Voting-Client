@@ -1,0 +1,238 @@
+.navbar {
+    color: purple;
+    background-color: white;
+    height: 70px;
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(128, 0, 128, 0.4);
+    z-index: 2;
+  }
+
+  .home{
+
+    text-decoration:none;
+    font-size:16px;
+    font-weight: 700;
+
+  }
+
+  
+  .main-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+  }
+  
+  .navbar--logo {
+     /* position: relative; */
+    display: flex;
+    /* flex-direction: row; */
+    margin-left: 10px;
+  }
+
+  .flip-box{
+
+    width:160px;
+    height:70px;
+    /* background-color:brown; */
+  }
+  
+  .img-logo {
+    display: flex;
+  }
+  
+  .logo {
+    border-radius: 40px;
+    height: 50px;
+    width: 40px;
+  }
+  
+  .navbar--details {
+    display: flex;
+    margin-left: 890px;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 2rem;
+  
+    
+  }
+  
+  .flex-direction-left {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  
+
+  .signup-button {
+    padding-right: 15px;
+  }
+
+
+  
+  .flip-box {
+    background-color: transparent;
+    width: 140px;
+    height: 120px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    /* background-color: #f1b409; */
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box-inner * {
+    display: flex;
+    margin-top: 4px;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front,
+  .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-back {
+    font-weight: bold;
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front p {
+    color: black;
+    font-weight: bolder;
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  
+  .flip-box-back p {
+    font-size: 11px;
+    color: black;
+    font-weight: bolder;
+  }
+  
+  .menu {
+
+    font-size:1.7rem;
+    cursor: pointer;
+    margin-left:20px;
+    display: none;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .main-navbar {
+      width: 55%;
+    }
+  
+    .navbar--details {
+      margin-left: 400px;
+    }
+  
+    .signup-button--button {
+      font-size: 10px;
+      width: 100px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar--details {
+      margin-left: 200px;
+    }
+  
+    .flex-direction-left {
+      display: none;
+    }
+  
+    .menu {
+      display: block;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  
+  
+    aside {
+      width: 100vw;
+      /* margin-left: 0; */
+    }
+  
+    .backdrop {
+      position: fixed;
+      top: 0;
+      left: 101vw;
+      width: 35%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 50;
+    }
+  }
+  
+  /* // STYLES FOR THE SIDEBAR */
+  
+  aside {
+    height: 100%;
+    /* // width:25%; */
+    /* margin-left: -300px; */
+    position: absolute;
+    background-color: white;
+    /* // background-color: red; */
+    top: 0;
+    left: 0;
+    z-index: 4;
+  }
+  
+  .close-btn {
+    float: right;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+  
+  .close {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out 0.3ms;
+  }
+  
+  .close:hover {
+    transform: rotate(360deg);
+  }
+  
+  .side-logo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+  
+  .side-main-logo {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .main-logo {
+    width: 100px;
+  }
+  
+  .main-logo .side-logos {
+    border-radius: 40px;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  
