@@ -21,8 +21,6 @@ function Navbar() {
 
             <div className='main-navbar'>
 
-                <Link to="/" className ='home'>
-
                     <div className="navbar--logo">
 
                         <div className="flip-box img-logo">
@@ -55,7 +53,7 @@ function Navbar() {
                     </div>
 
 
-                </Link>
+                
 
 
                 <div className="navbar--details">
@@ -104,10 +102,12 @@ function Navbar() {
 
 
          {shownav &&(
+
+            <>
          
          <aside>
 
-                    <div className="backdrop" onClick={() => setshownav(!shownav)}></div>
+                    <div className="backdrop" onClick={() => setshownav(!shownav)}> </div>
 
                     <div className="side">
 
@@ -143,7 +143,7 @@ function Navbar() {
                                     </div>
 
 
-                                    <div class="flip-box-back">
+                                    <div className="flip-box-back">
 
                                         <Link to="/" className ='home' style={{ textDecoration: "none" }}>
                                             <p>
@@ -179,6 +179,8 @@ function Navbar() {
 
 
         </aside>
+
+        </>
         
         )}
 
