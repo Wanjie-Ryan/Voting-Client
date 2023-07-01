@@ -1,0 +1,64 @@
+.voter-specific{
+
+    height:80vh;
+    width:100%;
+}
+
+.voter-specific--container{
+
+    margin-top:120px;
+    display:flex;
+    flex-direction: column;
+    height:70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container-voter{
+
+    margin-bottom: 30px;
+}
+
+.img-voter{
+
+    height:40vh;
+    width:30vw;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 4px purple;
+
+}
+
+.vote-p{
+
+    margin-bottom:10px;
+}
+
+.name{
+
+    display:flex;
+    /* flex-direction:column; */
+    margin-top:20px;
+}
+
+input{
+    width: 230px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: border-color 0.3s ease-in-out;
+  
+   
+}
+
+input:focus{
+    
+    outline: none;
+    border-color:purple;
+      
+}
+
+input::placeholder {
+    font-weight: bold;
+  }
+  

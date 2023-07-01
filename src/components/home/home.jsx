@@ -14,6 +14,8 @@ function Home() {
             id:1,
             image:image,
             name:'Ryan',
+            position:'Delegate',
+            school:'Engineering and Technology',
             btn:'vote'
         },
 
@@ -21,6 +23,8 @@ function Home() {
             id:2,
             image:image,
             name:'Rose',
+            position:'Delegate',
+            school:'Engineering and Technology',
             btn:'vote'
         },
 
@@ -28,6 +32,8 @@ function Home() {
             id:3,
             image:image,
             name:'Jimmy',
+            position:'Delegate',
+            school:'Engineering and Technology',
             btn:'vote'
         },
 
@@ -35,6 +41,8 @@ function Home() {
             id:4,
             image:image,
             name:'Kale',
+            position:'Delegate',
+            school:'Engineering and Technology',
             btn:'vote'
         },
 
@@ -42,6 +50,8 @@ function Home() {
             id:5,
             image:image,
             name:'Juliet',
+            position:'Delegate',
+            school:'Engineering and Technology',
             btn:'vote'
         },
 
@@ -49,6 +59,8 @@ function Home() {
             id:6,
             image:image,
             name:'Kim',
+            position:'Delegate',
+            school:'Engineering and Technology',
             btn:'vote'
         },
 
@@ -89,7 +101,9 @@ function Home() {
 
                                 <div className ='aspirant-details'>
 
-                                    <h3 className ='asp-name'>Name:{person.name}</h3>
+                                    <h3 className ='asp-name'> Aspirant Name:{person.name}</h3>
+                                    <h3 className ='asp-name'> Aspirant Position:{person.position}</h3>
+                                    <h3 className ='asp-name'> Aspirant School:{person.school}</h3>
 
                                     <Link to= {{ pathname: `/voter/${person.id}`  }} >
 
