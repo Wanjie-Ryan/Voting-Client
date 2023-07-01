@@ -57,14 +57,14 @@ function Home() {
 
     ]
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
-    const handleClick =(id)=>{
+    // const handleClick =(id)=>{
 
-        navigate(`/voter/${id}`)
+    //     navigate(`/voter/${id}`)
 
 
-    }
+    // }
 
 
   return (
@@ -91,11 +91,11 @@ function Home() {
 
                                     <h3 className ='asp-name'>Name:{person.name}</h3>
 
-                                    {/* <Link to= {`/voter/${person.id}`}> */}
+                                    <Link to= {{ pathname: `/voter/${person.id}`  }} >
 
-                                     <button className="btn-cont" onClick={()=>handleClick(person.id)}>{person.btn}</button>
+                                     <button className="btn-cont" >{person.btn}</button>
                                     
-                                    {/* </Link> */}
+                                    </Link>
 
                                 </div>
 
