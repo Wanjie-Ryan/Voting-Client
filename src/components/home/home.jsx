@@ -136,38 +136,47 @@ function Home() {
 
             <h1 className="aspirants-title">And Our Aspirants are</h1>
 
+            {loading ? <TbFidgetSpinner className='spinner-loader'/> :(
+
                 <div className="main-aspirants-cont">
 
                     {aspirants.map((person)=>(
                         
                         <div className ='aspirant-containers' key ={person._id}>
 
-                            <div className="aspirant-cont">
 
-                                <div className="imgs"><img className ='asp-img' src ={person.image} alt ={person.name}/></div>
+                            
+                            
+                                <div className="aspirant-cont">
 
-                                <div className ='aspirant-details'>
+                                    <div className="imgs"><img className ='asp-img' src ={person.image} alt ={person.name}/></div>
 
-                                    <h3 className ='asp-name'> Aspirant Name:{person.name}</h3>
-                                    <h3 className ='asp-name'> Aspirant Position:{person.Position}</h3>
-                                    <h3 className ='asp-name'> Aspirant School:{person.Represent}</h3>
+                                    <div className ='aspirant-details'>
 
-                                    <Link to= {{ pathname: `/voter/${person._id}`  }} >
+                                        <h3 className ='asp-name'> Aspirant Name:{person.name}</h3>
+                                        <h3 className ='asp-name'> Aspirant Position:{person.Position}</h3>
+                                        <h3 className ='asp-name'> Aspirant School:{person.Represent}</h3>
 
-                                     <button className="btn-cont" >Vote</button>
-                                    
-                                    </Link>
+                                        <Link to= {{ pathname: `/voter/${person._id}`  }} >
+
+                                        <button className="btn-cont" >Vote</button>
+
+                                        {errmsg && <p className ='error'>{errmsg}</p>}
+                                        
+                                        </Link>
+
+                                    </div>
 
                                 </div>
-
-                            </div>
+                            
+                            
 
                         </div>
 
                     ))}
 
 
-                </div>
+                </div>)}
 
 
         </section>
