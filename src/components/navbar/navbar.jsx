@@ -70,7 +70,7 @@ function Navbar() {
 
                         <p>
 
-                            <Link to="" className="home">
+                            <Link to="http://localhost:3000" className="home">
                             Aspirant
                             </Link>
 

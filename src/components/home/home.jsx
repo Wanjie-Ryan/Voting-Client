@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './home.css'
 import image from '../assets/icon-votes.jpg'
 import {Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import {Image} from 'cloudinary-react'
+import {TbFidgetSpinner} from 'react-icons/tb'
 
 
 
