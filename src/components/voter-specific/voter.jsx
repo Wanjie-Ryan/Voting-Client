@@ -1,8 +1,9 @@
 import React, {useState, useEffect } from 'react'
 import './voter.css'
 import {useParams, useLocation} from 'react-router-dom'
-import image from '../assets/icon-votes.jpg'
+// import image from '../assets/icon-votes.jpg'
 import axios from 'axios'
+import {Image} from 'cloudinary-react'
 
 
 function Voter() {
@@ -12,7 +13,7 @@ function Voter() {
 
     const [errmsg, seterrmsg] = useState()
     const [loading, setloading] = useState(false)
-    const [singAsp, setsingAsp] = useState([])
+    const [singAsp, setsingAsp] = useState()
 
     useEffect(()=>{
 
@@ -20,6 +21,18 @@ function Voter() {
 
         try{
 
+          const singleAspirant = await axios.get(`http://localhost:3007/api/admin/allaspirants/${id}`)
+          // console.log(singleAspirant)
+
+          const singleAspData = singleAspirant.data.singleAsp
+
+          // console.log(singleAspData)
+
+          setsingAsp(singleAspData)
+
+          setloading(false)
+
+          console.log(singAsp)
 
         }
 
@@ -31,11 +44,11 @@ function Voter() {
 
         }
 
-
-
       }
 
-    }, [])
+      fetchSingleAspirant()
+
+    }, [id])
 
     
 
@@ -47,37 +60,52 @@ function Voter() {
 
         <section className="voter-specific">
 
-            <form className="voter-specific--container">
 
-              <div className="img-container-voter">
+            {/* {singAsp.map((persons)=>( */}
 
-                <img src={image} alt="" className="img-voter" />
-
-              </div>
-
-              <h3 className ='asp-name'> Aspirant Name:<span>Ryan</span></h3>
-
-              <div className="name">
 
               
-                <label className='lbl' htmlFor='name'>Your Name:</label>
-                <input type ='text' palceholder = 'Enter your name'/>
+              <form className="voter-specific--container" >
 
-              </div>
+                
 
-              <div className ='name'>
+                  <div className="img-container-voter">
 
-                <label className='lbl' htmlFor='name'>Your Email:</label>
-                <input type='email' palceholder = 'Enter your name'/>
+                    <img src={singAsp.image} alt={singAsp.name} className="img-voter" />
 
-              </div>
+                    {/* <Image cloudName ='https://api.cloudinary.com/v1_1/djgk2k4sw/image/upload' publicId ={singAsp.image} className ='img-voter' alt ='singAsp.name'/> */}
 
 
-              <button className="btn-cont">Confirm Vote</button>
+                  </div>
 
-              <p className ='vote-p'>0 Votes</p>
+                  <h3 className ='asp-name'> Aspirant Name:<span className ='span-name'>{singAsp.name}</span></h3>
+                  
+                  {errmsg && <p className ='error'>{errmsg}</p>}
 
-            </form>
+                  <div className="name">
+
+                  
+                    <label className='lbl' htmlFor='name'>Your Name:</label>
+                    <input type ='text' palceholder = 'Enter your name'/>
+
+                  </div>
+
+                  <div className ='name'>
+
+                    <label className='lbl' htmlFor='name'>Your Email:</label>
+                    <input type='email' palceholder = 'Enter your name'/>
+
+                  </div>
+
+
+                  <button className="btn-cont">Confirm Vote</button>
+
+                  <p className ='vote-p'>0 Votes</p>
+
+                </form>
+                
+                {/* )) */}
+            {/* } */}
 
 
         </section>
