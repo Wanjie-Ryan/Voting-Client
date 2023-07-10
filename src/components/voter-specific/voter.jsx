@@ -4,7 +4,7 @@ import {useParams, useLocation} from 'react-router-dom'
 // import image from '../assets/icon-votes.jpg'
 import axios from 'axios'
 import {Image} from 'cloudinary-react'
-
+import {TbFidgetSpinner} from 'react-icons/tb'
 
 function Voter() {
 
@@ -65,13 +65,20 @@ function Voter() {
 
 
               
+              {singAsp?(
+              
               <form className="voter-specific--container" >
 
                 
 
                   <div className="img-container-voter">
 
-                    <img src={singAsp.image} alt={singAsp.name} className="img-voter" />
+                    {loading ? <TbFidgetSpinner className='spinner-loader'/> :(
+
+                      <img src={singAsp.image} alt={singAsp.name} className="img-voter" />
+
+                      )
+                    }
 
                     {/* <Image cloudName ='https://api.cloudinary.com/v1_1/djgk2k4sw/image/upload' publicId ={singAsp.image} className ='img-voter' alt ='singAsp.name'/> */}
 
@@ -102,7 +109,11 @@ function Voter() {
 
                   <p className ='vote-p'>0 Votes</p>
 
-                </form>
+                </form>):(
+
+                  <TbFidgetSpinner className='spinner-loader'/>
+
+                )}
                 
                 {/* )) */}
             {/* } */}
