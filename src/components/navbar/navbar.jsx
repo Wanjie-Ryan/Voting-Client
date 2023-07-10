@@ -60,13 +60,13 @@ function Navbar() {
 
                     <div className="flex-direction-left">
 
-                        <p>
+                        {/* <p>
 
                             <Link to="" className="home">
                             Admin
                             </Link>
 
-                        </p>
+                        </p> */}
 
                         <p>
 

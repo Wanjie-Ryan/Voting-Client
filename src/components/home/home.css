@@ -115,3 +115,9 @@
     100%{transform: rotate(360deg);}
   
   }
+
+.span-name{
+
+    font-weight:bold;
+    color:purple;
+}
