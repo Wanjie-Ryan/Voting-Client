@@ -50,6 +50,9 @@ function Voter() {
 
     }, [id])
 
+
+    const [name, setname] = useState()
+    const [email, setemail] = useState()
     
 
     
