@@ -5,6 +5,12 @@ import {useParams, useLocation} from 'react-router-dom'
 import axios from 'axios'
 import {Image} from 'cloudinary-react'
 import {TbFidgetSpinner} from 'react-icons/tb'
+import Cookies from 'js-cookie'
+import sweetAlert from 'sweetalert2'
+
+
+
+
 
 function Voter() {
 
@@ -53,6 +59,76 @@ function Voter() {
 
     const [name, setname] = useState()
     const [email, setemail] = useState()
+    // const [errmsg, seterrmsg] = useState()
+
+    const handleName = (e)=>{
+
+      setname(e.target.value)
+    }
+
+    const handleEmail = (e)=>{
+
+      setemail(e.target.value)
+    }
+
+    const handleSubmit = async(e)=>{
+
+      e.preventDefault()
+
+      if(!name || !email){
+
+        sweetAlert.fire({
+
+          icon:'error',
+          title:'oops...',
+          text:'Please Enter all Details of the Submission form'
+
+      })
+
+      return
+
+      }
+
+      setloading(true)
+
+      try{
+
+        const voterDetails ={
+
+          AspirantID:id,
+          name:name,
+          email:email
+
+        }
+
+        const voterData = await axios.post('http://localhost:3007/api/voters/submission',voterDetails)
+
+        console.log(voterData)
+
+        Cookies.set('VoterToken', voterData.headers.voterToken)
+
+        sweetAlert.fire({
+
+          title:'Your vote has been counted!',
+          text:voterData.data.msg,
+          icon:'success',
+          
+      })
+
+      setloading(false)
+
+
+
+      }
+
+      catch(err){
+
+        console.log(err)
+        seterrmsg('There seems to be an error please refresh the page')
+        setloading(false)
+
+      }
+    }
     
 
     
@@ -70,7 +146,7 @@ function Voter() {
               
               {singAsp?(
               
-              <form className="voter-specific--container" >
+              <form className="voter-specific--container"  onSubmit = {handleSubmit}>
 
                 
 
@@ -96,14 +172,14 @@ function Voter() {
 
                   
                     <label className='lbl' htmlFor='name'>Your Name:</label>
-                    <input type ='text' palceholder = 'Enter your name'/>
+                    <input type ='text' palceholder = 'Enter your name' name ='name' onChange ={handleName} value ={name}/>
 
                   </div>
 
                   <div className ='name'>
 
                     <label className='lbl' htmlFor='name'>Your Email:</label>
-                    <input type='email' palceholder = 'Enter your name'/>
+                    <input type='email' palceholder = 'Enter your name' name ='email' onChange ={handleEmail} value ={email}/>
 
                   </div>
 
