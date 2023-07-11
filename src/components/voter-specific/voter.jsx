@@ -170,24 +170,40 @@ function Voter() {
 
   const token = Cookies.get().VoterToken
 
-  // const handleVote =()=>{
+  const [count, setcount] = useState()
 
-
-    
-  //       if(token){
-
-  //         sweetAlert.fire({
-
-  //           title:'Your vote has already been counted!',
-  //           text:'You have already voted, you want to vote twice?',
-  //           icon:'error',
-            
-  //         })
-          
-  //     }
   
-  // }
+  useEffect(()=>{
 
+    const fetchCount = async()=>{
+
+      try{
+
+
+        
+        const countData = await axios.get(`http://localhost:3007/api/aspirant/allvoters/${id}`)
+        console.log(countData)
+        
+        const aspCount = countData.data.count
+        
+        setcount(aspCount)
+        
+        setloading(false)
+      }
+
+      catch(err){
+
+        console.log(err)
+        setloading(false)
+      }
+
+
+    }
+
+    fetchCount()
+
+
+  }, [])
     
 
     
@@ -248,7 +264,8 @@ function Voter() {
                       <button className="btn-cont" disabled ={token}>Confirm Vote</button>
 
                     </form>
-                  <p className ='vote-p'>0 Votes</p>
+
+                  <p className ='vote-p'>{count} Votes</p>
 
                 </div>):(
 
@@ -256,8 +273,7 @@ function Voter() {
 
                 )}
                 
-                {/* )) */}
-            {/* } */}
+               
 
 
         </section>
