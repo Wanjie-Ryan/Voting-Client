@@ -38,7 +38,7 @@ function Voter() {
 
           setloading(false)
 
-          console.log(singAsp)
+          // console.log(singAsp)
 
         }
 
@@ -58,7 +58,7 @@ function Voter() {
 
 
     const [name, setname] = useState()
-    const [email, setemail] = useState()
+    const [contact, setcontact] = useState()
     // const [errmsg, seterrmsg] = useState()
 
     const handleName = (e)=>{
@@ -66,16 +66,16 @@ function Voter() {
       setname(e.target.value)
     }
 
-    const handleEmail = (e)=>{
+    const handleContact = (e)=>{
 
-      setemail(e.target.value)
+      setcontact(e.target.value)
     }
 
     const handleSubmit = async(e)=>{
 
       e.preventDefault()
 
-      if(!name || !email){
+      if(!name || !contact){
 
         sweetAlert.fire({
 
@@ -97,15 +97,17 @@ function Voter() {
 
           AspirantID:id,
           name:name,
-          email:email
+          phoneNumber:contact
 
         }
 
-        const voterData = await axios.post('http://localhost:3007/api/voters/submission',voterDetails)
+        const voterData = await axios.post('http://localhost:3007/api/voters/submission', voterDetails)
 
         console.log(voterData)
 
-        Cookies.set('VoterToken', voterData.headers.voterToken)
+        Cookies.set('VoterToken', voterData.headers.votertoken)
+
+        // console.log(VoterToken)
 
         sweetAlert.fire({
 
@@ -117,8 +119,6 @@ function Voter() {
 
       setloading(false)
 
-
-
       }
 
       catch(err){
@@ -129,6 +129,65 @@ function Voter() {
 
       }
     }
+
+
+    useEffect(() => {
+
+      const checkauth = async () => {
+
+              if (!Cookies.get().VoterToken || Cookies.get().VoterToken === undefined) {
+
+                  // No token found, redirect to login page
+                  // console.log('not logged in (token not found)')
+                  console.log('eligible to vote')
+                  // setIsLogged(false)
+
+                  // navigate('/login')
+              } 
+              else {
+
+                  const token = Cookies.get().VoterToken
+                  console.log(token)
+                  const res = await axios({method:'get', url:'http://localhost:3007/api/voters/verify', headers:{Authorization:'Bearer ' + token}, data:{}})
+                  if (res.data.type !== 'success') {
+                  // console.log('not logged in (invalid token)')
+                  console.log('eligible to vote')
+
+
+                  // navigate('/login')
+
+                  // setIsLogged(false)
+                  }
+                  // setIsLogged(true)
+              }
+
+      }
+
+      checkauth()
+
+  }, [])
+
+
+  const token = Cookies.get().VoterToken
+
+  // const handleVote =()=>{
+
+
+    
+  //       if(token){
+
+  //         sweetAlert.fire({
+
+  //           title:'Your vote has already been counted!',
+  //           text:'You have already voted, you want to vote twice?',
+  //           icon:'error',
+            
+  //         })
+          
+  //     }
+  
+  // }
+
     
 
     
@@ -146,10 +205,10 @@ function Voter() {
               
               {singAsp?(
               
-              <form className="voter-specific--container"  onSubmit = {handleSubmit}>
-
                 
-
+                
+                
+                <div className="voter-specific--container"  >
                   <div className="img-container-voter">
 
                     {loading ? <TbFidgetSpinner className='spinner-loader'/> :(
@@ -168,27 +227,30 @@ function Voter() {
                   
                   {errmsg && <p className ='error'>{errmsg}</p>}
 
-                  <div className="name">
+                    <form  onSubmit = {handleSubmit}>
 
-                  
-                    <label className='lbl' htmlFor='name'>Your Name:</label>
-                    <input type ='text' palceholder = 'Enter your name' name ='name' onChange ={handleName} value ={name}/>
+                      <div className="name">
 
-                  </div>
+                      
+                        <label className='lbl' htmlFor='name'>Your Name:</label>
+                        <input type ='text' palceholder = 'Enter your name' name ='name' onChange ={handleName} value ={name}/>
 
-                  <div className ='name'>
+                      </div>
 
-                    <label className='lbl' htmlFor='name'>Your Email:</label>
-                    <input type='email' palceholder = 'Enter your name' name ='email' onChange ={handleEmail} value ={email}/>
+                      <div className ='name'>
 
-                  </div>
+                        <label className='lbl' htmlFor='name'>Your PhoneNumber:</label>
+                        <input type='tel' palceholder = 'Enter your phonenumber' name ='contact' onChange ={handleContact} value ={contact}/>
+
+                      </div>
 
 
-                  <button className="btn-cont">Confirm Vote</button>
+                      <button className="btn-cont" disabled ={token}>Confirm Vote</button>
 
+                    </form>
                   <p className ='vote-p'>0 Votes</p>
 
-                </form>):(
+                </div>):(
 
                   <TbFidgetSpinner className='spinner-loader'/>
 

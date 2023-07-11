@@ -60,4 +60,9 @@ input:focus{
 input::placeholder {
     font-weight: bold;
   }
+
+.btn-cont:disabled{
+
+    cursor:not-allowed;
+}
   
