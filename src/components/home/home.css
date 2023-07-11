@@ -1,7 +1,9 @@
 .voters{
 
-    /* height:120vh; */
+    height:200vh;
+    /* min-height: calc(100vh - 100px); */
     width:100%;
+    /* padding-bottom:200px; */
 }
 
 .aspirants-title{
@@ -47,7 +49,9 @@
     width:22vw;
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0 0 10px 4px purple;
+    /* box-shadow: 0 0 10px 4px purple; */
+    box-shadow: 0 0 10px 4px rgba(128, 0, 128, 0.5);
+
 }
 
 .aspirant-details{

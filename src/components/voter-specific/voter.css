@@ -39,7 +39,8 @@
     width:30vw;
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0 0 10px 4px purple;
+    /* box-shadow: 0 0 10px 4px purple; */
+    box-shadow: 0 0 10px 4px rgba(128, 0, 128, 0.5);
 
 }
 

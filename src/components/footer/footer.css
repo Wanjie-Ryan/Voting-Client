@@ -22,13 +22,15 @@
     background-size: var(--theme-footer-background-size);
     border-top: var(--theme-footer-background-border-top);
     background-color: black;
-    position: inherit;
+    /* position: inherit; */
     bottom: 0;
+    position:sticky;
+    /* height:100px; */
     left: 0;
     right: 0;
     color:purple;
     width: 100%;
-    z-index: 9999; /* Set a higher z-index to ensure it's on top of other content */
+    /* z-index: 9999; */
   }
   
   .site-footer--container {
