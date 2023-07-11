@@ -205,6 +205,28 @@ function Voter() {
 
   }, [])
     
+  // console.log(count)
+
+  let word
+
+  
+  if(count >1){
+
+     word = 'Votes'
+  }
+  else if(count === 1){
+
+     word = 'Vote'
+  }
+  else if(count === 0){
+
+     word = 'Votes'
+  }
+
+  else if(count === undefined){
+
+    word = '0 Votes'
+  }
 
     
   return (
@@ -265,7 +287,7 @@ function Voter() {
 
                     </form>
 
-                  <p className ='vote-p'>{count} Votes</p>
+                  <p className ='vote-p'>{count } {word}</p>
 
                 </div>):(
 
