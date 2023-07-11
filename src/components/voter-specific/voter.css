@@ -14,6 +14,20 @@
     align-items: center;
 }
 
+.form-container{
+
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    /* justify-content: center; */
+    width:700px;
+    margin-left:auto;
+    margin-right:auto;
+    /* background-color:brown; */
+    gap:10px;
+    /* margin-bottom: 20px; */
+}
+
 .img-container-voter{
 
     margin-bottom: 30px;
@@ -38,6 +52,7 @@
 
     display:flex;
     /* flex-direction:column; */
+    /* margin-left:10px; */
     margin-top:20px;
 }
 
@@ -64,5 +79,6 @@ input::placeholder {
 .btn-cont:disabled{
 
     cursor:not-allowed;
+    color:pink;
 }
   

@@ -44,7 +44,7 @@ function Voter() {
 
         catch(err){
 
-          console.log(err)
+          // console.log(err)
           seterrmsg('There seems to be an error please refresh the page')
           setloading(false)
 
@@ -103,7 +103,7 @@ function Voter() {
 
         const voterData = await axios.post('http://localhost:3007/api/voters/submission', voterDetails)
 
-        console.log(voterData)
+        // console.log(voterData)
 
         Cookies.set('VoterToken', voterData.headers.votertoken)
 
@@ -123,7 +123,7 @@ function Voter() {
 
       catch(err){
 
-        console.log(err)
+        // console.log(err)
         seterrmsg('There seems to be an error please refresh the page')
         setloading(false)
 
@@ -139,7 +139,7 @@ function Voter() {
 
                   // No token found, redirect to login page
                   // console.log('not logged in (token not found)')
-                  console.log('eligible to vote')
+                  // console.log('eligible to vote')
                   // setIsLogged(false)
 
                   // navigate('/login')
@@ -151,7 +151,7 @@ function Voter() {
                   const res = await axios({method:'get', url:'http://localhost:3007/api/voters/verify', headers:{Authorization:'Bearer ' + token}, data:{}})
                   if (res.data.type !== 'success') {
                   // console.log('not logged in (invalid token)')
-                  console.log('eligible to vote')
+                  // console.log('eligible to vote')
 
 
                   // navigate('/login')
@@ -227,7 +227,7 @@ function Voter() {
                   
                   {errmsg && <p className ='error'>{errmsg}</p>}
 
-                    <form  onSubmit = {handleSubmit}>
+                    <form  className ='form-container' onSubmit = {handleSubmit}>
 
                       <div className="name">
 
