@@ -179,8 +179,8 @@ function Voter() {
 
       try{
 
+        setloading(true)
 
-        
         const countData = await axios.get(`http://localhost:3007/api/aspirant/allvoters/${id}`)
         console.log(countData)
         
