@@ -24,7 +24,7 @@ function Home() {
 
                 setloading(true)
 
-                const fetchedAsps = await axios.get('http://localhost:3007/api/admin/allaspirants')
+                const fetchedAsps = await axios.get('https://voting-server-7g7j.onrender.com/api/admin/allaspirants')
 
                 // console.log(fetchedAsps)
 

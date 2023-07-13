@@ -27,7 +27,7 @@ function Voter() {
 
         try{
 
-          const singleAspirant = await axios.get(`http://localhost:3007/api/admin/allaspirants/${id}`)
+          const singleAspirant = await axios.get(`https://voting-server-7g7j.onrender.com/api/admin/allaspirants/${id}`)
           // console.log(singleAspirant)
 
           const singleAspData = singleAspirant.data.singleAsp
@@ -101,7 +101,7 @@ function Voter() {
 
         }
 
-        const voterData = await axios.post('http://localhost:3007/api/voters/submission', voterDetails)
+        const voterData = await axios.post('https://voting-server-7g7j.onrender.com/api/voters/submission', voterDetails)
 
         // console.log(voterData)
 
@@ -148,7 +148,7 @@ function Voter() {
 
                   const token = Cookies.get().VoterToken
                   console.log(token)
-                  const res = await axios({method:'get', url:'http://localhost:3007/api/voters/verify', headers:{Authorization:'Bearer ' + token}, data:{}})
+                  const res = await axios({method:'get', url:'https://voting-server-7g7j.onrender.com/api/voters/verify', headers:{Authorization:'Bearer ' + token}, data:{}})
                   if (res.data.type !== 'success') {
                   // console.log('not logged in (invalid token)')
                   // console.log('eligible to vote')
@@ -181,8 +181,8 @@ function Voter() {
 
         setloading(true)
 
-        const countData = await axios.get(`http://localhost:3007/api/aspirant/allvoters/${id}`)
-        console.log(countData)
+        const countData = await axios.get(`https://voting-server-7g7j.onrender.com/api/aspirant/allvoters/${id}`)
+        // console.log(countData)
         
         const aspCount = countData.data.count
         
