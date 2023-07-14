@@ -70,9 +70,9 @@ function Navbar() {
 
                         <p>
 
-                            <Link to="https://sisi-voters-aspirant.vercel.app/" className="home">
+                            <a href="https://sisi-voters-aspirant.vercel.app/" className="home">
                             Aspirant
-                            </Link>
+                            </a>
 
                         </p>
 
