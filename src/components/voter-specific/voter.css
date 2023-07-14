@@ -1,6 +1,6 @@
 .voter-specific{
 
-    height:100vh;
+    height:60vh;
     width:100%;
 }
 
@@ -86,4 +86,43 @@ input::placeholder {
     cursor:not-allowed;
     color:pink;
 }
+
+@media screen and (max-width: 1024px) {
+    .voter-specific--container {
+      margin-top: 80px; /* Adjust the margin top as needed */
+    }
+  
+    .img-voter {
+      height: 30vh; /* Adjust the height as needed */
+      width: 25vw; /* Adjust the width as needed */
+    }
+  
+    .form-container {
+      width: 500px; /* Adjust the width as needed */
+    }
+  
+    .vote-p {
+      font-size: 18px; /* Adjust the font size as needed */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .voter-specific--container {
+      margin-top: 60px; /* Adjust the margin top as needed */
+    }
+  
+    .img-voter {
+      height: 20vh; /* Adjust the height as needed */
+      width: 40vw; /* Adjust the width as needed */
+    }
+  
+    .form-container {
+      width: 300px; /* Adjust the width as needed */
+    }
+  
+    .vote-p {
+      font-size: 16px; /* Adjust the font size as needed */
+    }
+  }
+  
   

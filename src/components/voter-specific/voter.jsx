@@ -270,14 +270,14 @@ function Voter() {
                       <div className="name">
 
                       
-                        <label className='lbl' htmlFor='name'>Your Name:</label>
+                        <label className='lbl' htmlFor='name'>Name:</label>
                         <input type ='text' palceholder = 'Enter your name' name ='name' onChange ={handleName} value ={name}/>
 
                       </div>
 
                       <div className ='name'>
 
-                        <label className='lbl' htmlFor='name'>Your PhoneNumber:</label>
+                        <label className='lbl' htmlFor='name'>PhoneNumber:</label>
                         <input type='tel' palceholder = 'Enter your phonenumber' name ='contact' onChange ={handleContact} value ={contact}/>
 
                       </div>
