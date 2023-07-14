@@ -74,10 +74,14 @@ function Footer() {
                         <h5 className="-title">Contact</h5>
                         <ul className="-list">
                             <li>
-                                <a href="mailto:g2fconnect@gmail.com" className='footer-links'>Email</a>
+                                <a href="mailto:ryanwanjie1@gmail.com" className='footer-links'>Email</a>
                             </li>
                             <li>
                                 <a href="/map" className='footer-links'>Map</a>
+                            </li>
+
+                            <li>
+                                <a href="tel:+254791618714" className='footer-links'>Developed by +254791618714. Wanjie</a>
                             </li>
                         </ul>
 

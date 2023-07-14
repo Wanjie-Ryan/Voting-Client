@@ -125,3 +125,142 @@
     font-weight:bold;
     color:purple;
 }
+
+
+/* @media screen and (max-width:1024px) {
+
+    .voters{
+
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height:100%;
+    }
+
+    .aspirants-title{
+
+        text-align: center;
+        font-size:12px;
+    }
+
+    .main-aspirants-cont{
+
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        /* margin-left: auto; */
+        /* margin-right:auto ; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* height: 200vh;/ */
+     /* }  */
+
+    
+/* }  */
+
+/* @media screen and (max-width:768px){
+
+
+} */
+
+
+@media screen and (max-width: 1024px) {
+    .voters {
+
+      width: 80%;
+      margin-left:auto;
+      margin-right:auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  
+    .aspirants-title {
+      text-align: center;
+      font-size: 1.2rem; /* Adjust the font size as needed */
+    }
+  
+    .main-aspirants-cont {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .aspirant-containers {
+      width: 100%;
+    }
+  
+    .aspirant-cont {
+      width: 100%;
+    }
+  
+    .asp-img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .aspirant-details {
+      width: 100%;
+    }
+  
+    .btn-cont {
+      font-size: 0.9rem; /* Adjust the font size as needed */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .voters {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  
+    .aspirants-title {
+      text-align: center;
+      font-size: 1rem; /* Adjust the font size as needed */
+      margin-top: 80px; /* Adjust the margin top as needed */
+    }
+  
+    .main-aspirants-cont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .aspirant-containers {
+      width: 100%;
+      margin-bottom: 1.5rem; /* Adjust the margin bottom as needed */
+    }
+  
+    .aspirant-cont {
+      width: 90%; /* Adjust the width as needed */
+    }
+  
+    .asp-img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .aspirant-details {
+      width: 100%;
+      margin-top: 1rem; /* Adjust the margin top as needed */
+    }
+  
+    .asp-name {
+      font-size: 0.9rem; /* Adjust the font size as needed */
+    }
+  
+    .btn-cont {
+      font-size: 0.9rem; /* Adjust the font size as needed */
+      margin-top: 1rem; /* Adjust the margin top as needed */
+    }
+  }
+  

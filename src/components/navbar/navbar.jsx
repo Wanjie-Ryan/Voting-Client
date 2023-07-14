@@ -167,8 +167,7 @@ function Navbar() {
 
                     <div className="side-details">
 
-                        <p>Admin</p>
-                        <hr></hr>
+                       
                         <p>Aspirant</p>
                         <hr></hr>
                         <p>Voter</p>
