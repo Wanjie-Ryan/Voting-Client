@@ -68,13 +68,13 @@ function Navbar() {
 
                         </p>
 
-                        <p>
+                        {/* <p>
 
                             <a href="https://sisi-voters-aspirant.vercel.app/" className="home">
                             Aspirant
                             </a>
 
-                        </p>
+                        </p> */}
 
                         <p>
 
@@ -178,13 +178,13 @@ function Navbar() {
 
                     <hr></hr>
 
-                    <p>
+                    {/* <p>
 
                         <a href="https://sisi-voters-aspirant.vercel.app/" className="home">
                         Aspirant
                         </a>
 
-                    </p>
+                    </p> */}
 
 
 
