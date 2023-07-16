@@ -176,6 +176,8 @@ function Navbar() {
 
                     </p>
 
+                    <hr></hr>
+
                     <p>
 
                         <a href="https://sisi-voters-aspirant.vercel.app/" className="home">
