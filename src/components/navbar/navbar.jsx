@@ -168,9 +168,21 @@ function Navbar() {
                     <div className="side-details">
 
                        
-                        <p>Aspirant</p>
-                        <hr></hr>
-                        <p>Voter</p>
+                    <p>
+
+                        <Link to="/" className="home">
+                        Voter
+                        </Link>
+
+                    </p>
+
+                    <p>
+
+                        <a href="https://sisi-voters-aspirant.vercel.app/" className="home">
+                        Aspirant
+                        </a>
+
+                    </p>
 
 
 
